@@ -1,0 +1,19 @@
+<service>
+	<parameter name="ServiceClass" locked="false">
+		com.acme.axis2.noannotation.service.ApplicantTrackingService
+	</parameter>
+
+	<operation name="echo">
+		<messageReceiver mep="http://www.w3.org/ns/wsdl/in-out"
+			class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+	</operation>
+	<operation name="retrieveApplicants">
+		<messageReceiver mep="http://www.w3.org/ns/wsdl/in-out"
+			class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+	</operation>
+	<operation name="getPositions">
+		<messageReceiver mep="http://www.w3.org/ns/wsdl/in-out"
+			class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+	</operation>
+
+</service>
