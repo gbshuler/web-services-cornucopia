@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dd6faf88-24b6-470b-9644-dbdd04933361" activeEnvironment="Default" name="ApplicantTrackingServiceNoAnnotationWithSoap" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="4b31480e-77ab-4374-b34f-7e3fe82ecf0b" wsaVersion="NONE" name="ApplicantTrackingServiceSoap11Binding" type="wsdl" bindingName="{http://service.noannotation.axis2.acme.com}ApplicantTrackingServiceSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/axis2/services/ApplicantTrackingService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="b5d7c29b-8c7b-4fb5-87a2-80f41817d515" isOneWay="false" action="urn:echo" name="echo" bindingOperationName="echo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c24c5d52-2bf9-4597-91e4-8fe5c480b43a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap11Endpoint/</con:endpoint><con:request>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   &lt;soapenv:Header/>\r
+   &lt;soapenv:Body/>\r
+&lt;/soapenv:Envelope></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:echo"/></con:call></con:operation><con:operation id="028c6cb6-e39f-42b4-ac4a-a2735fc521c7" isOneWay="false" action="urn:getPositions" name="getPositions" bindingOperationName="getPositions" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2575c7c7-284c-4266-9457-7794ca53a912" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.noannotation.axis2.acme.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getPositions/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getPositions"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="440e48be-91dc-438a-b6b4-ee0959eafaac" isOneWay="false" action="urn:retrieveApplicants" name="retrieveApplicants" bindingOperationName="retrieveApplicants" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="330c097d-ce2b-4b16-8478-4b4b18e07b44" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.noannotation.axis2.acme.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:retrieveApplicants>\r
+         <ser:positionNumber>1</ser:positionNumber>\r
+      </ser:retrieveApplicants>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:retrieveApplicants"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="2e61be7e-8f0f-4cbc-8a92-0a6630778623" wsaVersion="NONE" name="ApplicantTrackingServiceSoap12Binding" type="wsdl" bindingName="{http://service.noannotation.axis2.acme.com}ApplicantTrackingServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8080/axis2/services/ApplicantTrackingService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/axis2/services/ApplicantTrackingService?wsdl"><con:part><con:url>http://localhost:8080/axis2/services/ApplicantTrackingService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://service.noannotation.axis2.acme.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://service.noannotation.axis2.acme.com" xmlns:ax23="http://chrono.time.java/xsd" xmlns:ax25="http://ws.apache.org/namespaces/axis2/enum" xmlns:ax22="http://time.java/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax21="http://domain.axis2.acme.com/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.apache.org/namespaces/axis2/enum">
+      <xs:simpleType name="java.time.DayOfWeek">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="MONDAY"/>
+          <xs:enumeration value="TUESDAY"/>
+          <xs:enumeration value="WEDNESDAY"/>
+          <xs:enumeration value="THURSDAY"/>
+          <xs:enumeration value="FRIDAY"/>
+          <xs:enumeration value="SATURDAY"/>
+          <xs:enumeration value="SUNDAY"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="java.time.Month">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="JANUARY"/>
+          <xs:enumeration value="FEBRUARY"/>
+          <xs:enumeration value="MARCH"/>
+          <xs:enumeration value="APRIL"/>
+          <xs:enumeration value="MAY"/>
+          <xs:enumeration value="JUNE"/>
+          <xs:enumeration value="JULY"/>
+          <xs:enumeration value="AUGUST"/>
+          <xs:enumeration value="SEPTEMBER"/>
+          <xs:enumeration value="OCTOBER"/>
+          <xs:enumeration value="NOVEMBER"/>
+          <xs:enumeration value="DECEMBER"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://time.java/xsd" xmlns:ax24="http://chrono.time.java/xsd">
+      <xs:import namespace="http://chrono.time.java/xsd"/>
+      <xs:import namespace="http://chrono.time.java/xsd"/>
+      <xs:complexType name="LocalDate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="chronology" nillable="true" type="ax24:IsoChronology"/>
+          <xs:element minOccurs="0" name="dayOfMonth" type="xs:int"/>
+          <xs:element minOccurs="0" name="dayOfWeek" nillable="true" type="ax25:java.time.DayOfWeek"/>
+          <xs:element minOccurs="0" name="dayOfYear" type="xs:int"/>
+          <xs:element minOccurs="0" name="era" nillable="true" type="ax24:Era"/>
+          <xs:element minOccurs="0" name="leapYear" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="month" nillable="true" type="ax25:java.time.Month"/>
+          <xs:element minOccurs="0" name="monthValue" type="xs:int"/>
+          <xs:element minOccurs="0" name="year" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.noannotation.axis2.acme.com" xmlns:ax26="http://ws.apache.org/namespaces/axis2/enum" xmlns:ax28="http://domain.axis2.acme.com/xsd">
+      <xs:import namespace="http://ws.apache.org/namespaces/axis2/enum"/>
+      <xs:import namespace="http://domain.axis2.acme.com/xsd"/>
+      <xs:element name="retrieveApplicants">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="positionNumber" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="retrieveApplicantsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax28:Applicant"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPositions">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPositionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax28:Position"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://chrono.time.java/xsd">
+      <xs:complexType abstract="true" name="AbstractChronology">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="IsoChronology">
+        <xs:complexContent>
+          <xs:extension base="ax23:AbstractChronology">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="calendarType" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="Era">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="value" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://domain.axis2.acme.com/xsd" xmlns:ax27="http://time.java/xsd">
+      <xs:import namespace="http://time.java/xsd"/>
+      <xs:import namespace="http://time.java/xsd"/>
+      <xs:complexType name="Applicant">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="applications" nillable="true" type="ax21:Position"/>
+          <xs:element minOccurs="0" name="human" nillable="true" type="ax21:Human"/>
+          <xs:element minOccurs="0" name="linkedInId" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Position">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="expireDate" nillable="true" type="ax27:LocalDate"/>
+          <xs:element minOccurs="0" name="maximumSalary" type="xs:int"/>
+          <xs:element minOccurs="0" name="minimumSalary" type="xs:int"/>
+          <xs:element minOccurs="0" name="number" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Human">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getPositionsRequest">
+    <wsdl:part name="parameters" element="ns:getPositions"/>
+  </wsdl:message>
+  <wsdl:message name="getPositionsResponse">
+    <wsdl:part name="parameters" element="ns:getPositionsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="echoRequest"/>
+  <wsdl:message name="echoResponse"/>
+  <wsdl:message name="retrieveApplicantsRequest">
+    <wsdl:part name="parameters" element="ns:retrieveApplicants"/>
+  </wsdl:message>
+  <wsdl:message name="retrieveApplicantsResponse">
+    <wsdl:part name="parameters" element="ns:retrieveApplicantsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ApplicantTrackingServicePortType">
+    <wsdl:operation name="getPositions">
+      <wsdl:input message="ns:getPositionsRequest" wsaw:Action="urn:getPositions"/>
+      <wsdl:output message="ns:getPositionsResponse" wsaw:Action="urn:getPositionsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <wsdl:input message="ns:echoRequest" wsaw:Action="urn:echo"/>
+      <wsdl:output message="ns:echoResponse" wsaw:Action="urn:echoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveApplicants">
+      <wsdl:input message="ns:retrieveApplicantsRequest" wsaw:Action="urn:retrieveApplicants"/>
+      <wsdl:output message="ns:retrieveApplicantsResponse" wsaw:Action="urn:retrieveApplicantsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApplicantTrackingServiceSoap11Binding" type="ns:ApplicantTrackingServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="getPositions">
+      <soap:operation soapAction="urn:getPositions" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <soap:operation soapAction="urn:echo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveApplicants">
+      <soap:operation soapAction="urn:retrieveApplicants" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ApplicantTrackingServiceSoap12Binding" type="ns:ApplicantTrackingServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="getPositions">
+      <soap12:operation soapAction="urn:getPositions" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <soap12:operation soapAction="urn:echo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveApplicants">
+      <soap12:operation soapAction="urn:retrieveApplicants" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ApplicantTrackingServiceHttpBinding" type="ns:ApplicantTrackingServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="getPositions">
+      <http:operation location="getPositions"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <http:operation location="echo"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveApplicants">
+      <http:operation location="retrieveApplicants"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApplicantTrackingService">
+    <wsdl:port name="ApplicantTrackingServiceHttpSoap11Endpoint" binding="ns:ApplicantTrackingServiceSoap11Binding">
+      <soap:address location="http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="ApplicantTrackingServiceHttpSoap12Endpoint" binding="ns:ApplicantTrackingServiceSoap12Binding">
+      <soap12:address location="http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap12Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="ApplicantTrackingServiceHttpEndpoint" binding="ns:ApplicantTrackingServiceHttpBinding">
+      <http:address location="http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="a4c4236d-ad9e-427f-bffc-386313935c94" isOneWay="false" action="urn:echo" name="echo" bindingOperationName="echo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8bfee091-d6ec-4dab-a860-7fbafa28f4b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap12Endpoint/</con:endpoint><con:request>&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
+   &lt;soap:Header/>\r
+   &lt;soap:Body/>\r
+&lt;/soap:Envelope></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:echo"/></con:call></con:operation><con:operation id="9481cb3f-d6fa-4983-a54a-47431ac695fa" isOneWay="false" action="urn:getPositions" name="getPositions" bindingOperationName="getPositions" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68a2ebda-e4fc-49a3-b0d4-9806d7c8918f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://service.noannotation.axis2.acme.com">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ser:getPositions/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getPositions"/></con:call></con:operation><con:operation id="7267b2f0-3cd6-4314-b2ad-72ac9ee2cd04" isOneWay="false" action="urn:retrieveApplicants" name="retrieveApplicants" bindingOperationName="retrieveApplicants" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8e026af9-fb30-48fa-9bda-21aeca5d41a6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/ApplicantTrackingService.ApplicantTrackingServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://service.noannotation.axis2.acme.com">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ser:retrieveApplicants>\r
+         <ser:positionNumber>?</ser:positionNumber>\r
+      </ser:retrieveApplicants>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:retrieveApplicants"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

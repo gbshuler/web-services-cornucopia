@@ -1,1 +1,26 @@
+# Compiled class file
+*.class
+#Do.. Keep everything used to build the archive file for axis2
+!aar/
+
+# Log file
+*.log
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#Don't put files from build in GiT
 /target/
+#Don't put Eclipse state in GiT
+/.settings/
