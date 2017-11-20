@@ -1,0 +1,34 @@
+<module name="logging" class="com.acme.axis2.noannotation.service.module.LoggingModule">
+	<!-- Since we are writing a logging handler, we can reuse the same handler "loggingPhase" for all modules -->
+	<InFlow>
+		<!-- Represents the handler chain that will run when a message is coming in. -->
+		<handler name="InFlowLogHandler"
+			class="com.acme.axis2.noannotation.service.module.LogHandler">
+			<order phase="loggingPhase" />
+		</handler>
+	</InFlow>
+
+	<OutFlow>
+		<!-- Represents the handler chain that will run when the message is going out. -->
+		<handler name="OutFlowLogHandler"
+			class="com.acme.axis2.noannotation.service.module.LogHandler">
+			<order phase="loggingPhase" />
+		</handler>
+	</OutFlow>
+
+	<OutFaultFlow>
+		<!-- Represents the handler chain that will run when there is a fault, and the fault is going out. -->
+		<handler name="FaultOutFlowLogHandler"
+			class="com.acme.axis2.noannotation.service.module.LogHandler">
+			<order phase="loggingPhase" />
+		</handler>
+	</OutFaultFlow>
+
+	<InFaultFlow>
+		<!-- Represents the handler chain that will run when there is a fault, and the fault is coming in. -->
+		<handler name="FaultInFlowLogHandler"
+			class="com.acme.axis2.noannotation.service.module.LogHandler">
+			<order phase="loggingPhase" />
+		</handler>
+	</InFaultFlow>
+</module>

@@ -1,4 +1,8 @@
-<service>
+<service name="ApplicantTrackingServiceWithLoggingModule">
+    <description>
+    This version of the ApplicantTrackingService has a logging module.
+    </description>
+    <module ref="logging"/>
 	<parameter name="ServiceClass" locked="false">
 		com.acme.axis2.noannotation.service.ApplicantTrackingService
 	</parameter>
