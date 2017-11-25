@@ -1,14 +1,47 @@
 <html ng-app="ContactApp">
 <head>
-<title>My Contact App 1250</title>
+<title>My Contact App 1411</title>
 <script src="/TestHarness/assets/jslibs/angular.min.js"></script>
 <script src="/TestHarness/assets/js/app.js"></script>
+<link href="/TestHarness/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/TestHarness/assets/css/bootstrap-theme.min.css"
+	rel="stylesheet">
 </head>
 <body>
-	<h1>My Contact App</h1>
-	<div ng-controller="ContactCtrl as ctrl">
-		<div ng-repeat="contact in ctrl.contacts">
-			<span> {{ contact.name.first + " " + contact.name.last }}</span>
+	<h1>My Contact App 1438</h1>
+	<div class="container" ng-controller="ContactCtrl as ctrl">
+		<div class="row">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
+					<span> {{ contact.name.first + " " + contact.name.last }}</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="row">
+			<div class="media">
+				<div class="media-left">
+					<a href="#"> <img src="{{ctrl.selectedContact.picture.medium}}"></img>
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">{{ ctrl.selectedContact.name.first +
+						" " + ctrl.selectedContact.name.last }}</h4>
+					<div>
+						<p>
+						<h6>Location</h6>
+						</p>
+						<p>{{ ctrl.selectedContact.location.street + " " +
+							ctrl.selectedContact.location.city + " " +
+							ctrl.selectedContact.location.state }}</p>
+						<p>
+						<h6>Phone</h6>
+						</p>
+						<p>{{ ctrl.selectedContact.phone }}</p>
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
