@@ -159,9 +159,11 @@ var app = angular.module("ContactApp", [])
 		];
 		
 		this.selectedContact = this.contacts[0];
+		this.activatedIndex = 0;
 		
 		this.selectContact = function(index) {
 			this.selectedContact = this.contacts[index];
+			this.activatedIndex = index;
 		}
 		
 	}

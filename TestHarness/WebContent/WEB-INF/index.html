@@ -12,7 +12,8 @@
 	<div class="container" ng-controller="ContactCtrl as ctrl">
 		<div class="row">
 			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
+				<li class="list-group-item" ng-class="{active : ctrl.activatedIndex === $index}"
+				    ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
 					<span> {{ contact.name.first + " " + contact.name.last }}</span>
 				</li>
 			</ul>
