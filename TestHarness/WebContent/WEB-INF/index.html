@@ -1,0 +1,15 @@
+<html ng-app="ContactApp">
+<head>
+<title>My Contact App 1250</title>
+<script src="/TestHarness/assets/jslibs/angular.min.js"></script>
+<script src="/TestHarness/assets/js/app.js"></script>
+</head>
+<body>
+	<h1>My Contact App</h1>
+	<div ng-controller="ContactCtrl as ctrl">
+		<div ng-repeat="contact in ctrl.contacts">
+			<span> {{ contact.name.first + " " + contact.name.last }}</span>
+		</div>
+	</div>
+</body>
+</html>
