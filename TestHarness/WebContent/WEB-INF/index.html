@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html ng-app="ContactApp">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>My Contact App 1411</title>
 <script src="/TestHarness/assets/jslibs/angular.min.js"></script>
 <script src="/TestHarness/assets/js/app.js"></script>
@@ -8,14 +10,22 @@
 	rel="stylesheet">
 </head>
 <body>
-	<h1>My Contact App 1438</h1>
+
+	<div ng-controller='TimeCtrl'>
+		<p>{{ clock | date:'HH:mm:ss'}}</p>
+	</div>
+	<div ng-controller="HeaderCtrl as head">
+		<h3>{{head.appTitle}}</h3>
+	</div>
+	<h1>My Contact App</h1>
 	<div class="container" ng-controller="ContactCtrl as ctrl">
 		<div class="row">
 			<ul class="list-group">
-				<li class="list-group-item" ng-class="{active : ctrl.activatedIndex === $index}"
-				    ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
-					<span> {{ contact.name.first + " " + contact.name.last }}</span>
-				</li>
+				<li class="list-group-item"
+					ng-class="{active : ctrl.activatedIndex === $index}"
+					ng-repeat="contact in ctrl.contacts"
+					ng-click="ctrl.selectContact($index)"><span> {{
+						contact.name.first + " " + contact.name.last }}</span></li>
 			</ul>
 		</div>
 
@@ -43,6 +53,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+		<div ng-controller="FooterCtrl as foot">
+				<h3>{{foot.appTitle}}</h3>
 		</div>
 	</div>
 </body>

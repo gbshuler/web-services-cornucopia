@@ -1,6 +1,19 @@
 var app = angular.module("ContactApp", [])
 {
+	app.controller('TimeCtrl', function($scope, $interval) {
+		var tick = function() {
+			$scope.clock = Date.now();
+		}
+		tick();
+		$interval(tick, 1000);
+	});
+
+	app.controller("HeaderCtrl", HeaderCtrl);
+	app.controller("FooterCtrl", FooterCtrl);
 	app.controller("ContactCtrl", ContactCtrl);
+
+	// Value service provides object to "AppName" symbol
+	app.value("AppNameSvc", "My Java Brains Contact Application UTF-8");
 
 	function ContactCtrl() {
 		this.contacts =
@@ -154,17 +167,136 @@ var app = angular.module("ContactApp", [])
 						"thumbnail" : "https://randomuser.me/api/portraits/thumb/men/40.jpg"
 					},
 					"nat" : "CH"
-				}
+				},
+				{
+					"gender" : "female",
+					"name" : {
+						"title" : "mrs",
+						"first" : "lilja",
+						"last" : "joki"
+					},
+					"location" : {
+						"street" : "5316 rotuaari",
+						"city" : "jakobstad",
+						"state" : "åland",
+						"postcode" : 53318
+					},
+					"email" : "lilja.joki@example.com",
+					"login" : {
+						"username" : "ticklishwolf810",
+						"password" : "traveler",
+						"salt" : "HpuETzHq",
+						"md5" : "e8d14c1d06fb532624e0985ef03cb532",
+						"sha1" : "5a2b1386e8e23144e49f808c110b5037c4945b93",
+						"sha256" : "961683cf836e5e697bec912c95ab04ff7922af29ea27911780fecd86130d462e"
+					},
+					"dob" : "1971-08-23 03:06:40",
+					"registered" : "2006-10-07 18:41:13",
+					"phone" : "08-284-954",
+					"cell" : "041-730-36-19",
+					"id" : {
+						"name" : "HETU",
+						"value" : "871-378Y"
+					},
+					"picture" : {
+						"large" : "https://randomuser.me/api/portraits/women/2.jpg",
+						"medium" : "https://randomuser.me/api/portraits/med/women/2.jpg",
+						"thumbnail" : "https://randomuser.me/api/portraits/thumb/women/2.jpg"
+					},
+					"nat" : "FI"
+				},
+				{
+					"gender" : "female",
+					"name" : {
+						"title" : "mrs",
+						"first" : "النا",
+						"last" : "نكو نظر"
+					},
+					"location" : {
+						"street" : "7150 میدان 7 تیر",
+						"city" : "خرم‌آباد",
+						"state" : "کرمان",
+						"postcode" : 77445
+					},
+					"email" : "النا.نكونظر@example.com",
+					"login" : {
+						"username" : "smallleopard670",
+						"password" : "tennesse",
+						"salt" : "VEv8MuFi",
+						"md5" : "3837bb255a33f5de62839f429a0b4c07",
+						"sha1" : "0290d78793b027ac8371cacb86c855cfcdfe6844",
+						"sha256" : "a02a537f748930f9cdf1740e7bd0e980454a5873141136edc8eda87282de12d3"
+					},
+					"dob" : "1977-04-02 09:06:18",
+					"registered" : "2016-04-09 18:03:15",
+					"phone" : "009-96538184",
+					"cell" : "0994-382-8041",
+					"id" : {
+						"name" : "",
+						"value" : null
+					},
+					"picture" : {
+						"large" : "https://randomuser.me/api/portraits/women/65.jpg",
+						"medium" : "https://randomuser.me/api/portraits/med/women/65.jpg",
+						"thumbnail" : "https://randomuser.me/api/portraits/thumb/women/65.jpg"
+					},
+					"nat" : "IR"
+				},
 
+				{
+					"gender" : "female",
+					"name" : {
+						"title" : "miss",
+						"first" : "ملینا",
+						"last" : "حسینی"
+					},
+					"location" : {
+						"street" : "4168 آزادی",
+						"city" : "پاکدشت",
+						"state" : "اصفهان",
+						"postcode" : 97573
+					},
+					"email" : "ملینا.حسینی@example.com",
+					"login" : {
+						"username" : "redkoala406",
+						"password" : "tucson",
+						"salt" : "JVF1P9z8",
+						"md5" : "37dfd3e52bd04fb2c382868484610f5f",
+						"sha1" : "448fe55af0baf2076c5d273de72bca2e7e0d8014",
+						"sha256" : "11ece642a824d152a4c2b6daec7b0479dfedb0fb848bd327f2869a8302b9f4a0"
+					},
+					"dob" : "1952-08-14 04:52:19",
+					"registered" : "2002-10-02 23:30:30",
+					"phone" : "030-04352652",
+					"cell" : "0995-214-8734",
+					"id" : {
+						"name" : "",
+						"value" : null
+					},
+					"picture" : {
+						"large" : "https://randomuser.me/api/portraits/women/84.jpg",
+						"medium" : "https://randomuser.me/api/portraits/med/women/84.jpg",
+						"thumbnail" : "https://randomuser.me/api/portraits/thumb/women/84.jpg"
+					},
+					"nat" : "IR"
+				}
 		];
-		
+
 		this.selectedContact = this.contacts[0];
 		this.activatedIndex = 0;
-		
+
 		this.selectContact = function(index) {
 			this.selectedContact = this.contacts[index];
 			this.activatedIndex = index;
 		}
-		
 	}
+}
+
+// Inject an object into the controller
+// The controller "declares its dependencies
+function HeaderCtrl(AppNameSvc) {
+	this.appTitle = AppNameSvc;
+}
+function FooterCtrl(AppNameSvc) {
+	this.appTitle = AppNameSvc;
 }
